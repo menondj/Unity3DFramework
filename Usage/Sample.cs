@@ -26,33 +26,33 @@ public class Sample : MonoBehaviour{
   
   void Start () {
 		
-		InitEventTriggers ();
+    InitEventTriggers ();
     sampleStateMachine = ScriptableObject.CreateInstance<SampleStateMachine>( );
-	  sampleStateMachine.Enable (   ); 
+    sampleStateMachine.Enable (   ); 
  }
  
  void Update(){	
 		
 		
-		if ( sampleStateMachine != null ) {
+   if ( sampleStateMachine != null ) {
 			
-			sampleStateMachine.Update (); // Executes the state machine delegate function as applicable.
+	sampleStateMachine.Update (); // Executes the state machine delegate function as applicable.
 	
-		}
+    }
     /* Do something .... */
     if ( somethingOccurs ) {
        pubInstance.NotifyListeners ("ChangeState");
        somethingOccurs = false;
     }
 	
-	}
+}
  
  void OnDestroy () {
 		
     sampleStateMachine.Disable ();
-		Destroy ( sampleStateMachine );
+    Destroy ( sampleStateMachine );
 		
-	}
+}
  
  
  void InitEventTriggers ( bool register = true ) {
@@ -62,23 +62,23 @@ public class Sample : MonoBehaviour{
       // the same lines as InitEventTriggers function as shown in SampleStateMachine.cs
 		
 		
-		if ( register ) {
+	if ( register ) {
 			
-			if ( pubInstance == null ) {
+	   if ( pubInstance == null ) {
 				
-				pubInstance = EventPublisherListener.Instance;
-				// AddRegister functions if applicable
+	     pubInstance = EventPublisherListener.Instance;
+	     // AddRegister functions if applicable
 				
-			}
+	  }
      
-		}
-		else if ( pubInstance != null ) {
-			
-      //Add Unregister functions if applicable
-			
-		}
-	
 	}
+	else if ( pubInstance != null ) {
+			
+         //Add Unregister functions if applicable
+			
+	}
+	
+ }
  
 }
  
