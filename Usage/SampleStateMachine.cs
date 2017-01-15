@@ -21,12 +21,12 @@ public class SampleStateMachine : StateMachine {
 
 
 	
-	// Use this for initialization
-	public UserStateMachine (  ) {
+ // Use this for initialization
+public UserStateMachine (  ) {
    
    InitEventTriggers ( ); // Register for Events which cause the StateChanges
-	 ProcessStateMachine += WaitState; // A  State when the scriptable object is instantiated	
-	}
+   ProcessStateMachine += WaitState; // A  State when the scriptable object is instantiated	
+}
 	
   
   public void Enable () {
@@ -39,24 +39,24 @@ public class SampleStateMachine : StateMachine {
   }
 	
   
-	override protected void Cleanup () {
-		// Do your own cleanup
-		base.Cleanup ();
-	}
+  override protected void Cleanup () {
+	// Do your own cleanup
+	base.Cleanup ();
+   }
 	
 	
 	
-	// Update is called once per frame
-	virtual protected void WaitState () {
+  // Update is called once per frame this is made virtual, since waitstate is common 
+ virtual protected void WaitState () {
 		/* Do something here */
-	}
+ }
 		
-	virtual protected void NewState () {
+ virtual protected void NewState () {
 	
 		/* Do something here */
 		
 		
-	}
+}
 
   void InitEventTriggers ( bool register = true ) {
 		
@@ -81,7 +81,7 @@ public class SampleStateMachine : StateMachine {
 			
 			if ( pubInstance != null ) {
 				
-        pubInstance.UnRegister ( "ChangeState", this.ChangeState );
+        		  pubInstance.UnRegister ( "ChangeState", this.ChangeState );
 			  pubInstance.UnRegister ( "GoBackToWait", this.GoBackToWait );
 
 				
