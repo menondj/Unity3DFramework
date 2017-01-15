@@ -28,9 +28,9 @@ public class EventPublisherListener : ScriptableObject {
     public  delegate void EventHandler ( params GameObject[] participants );
 	
 	
-	private  static EventPublisherListener instance;
+    private  static EventPublisherListener instance;
 	
-	private EventPublisherListener() {}
+    private EventPublisherListener() {}
 
 // Singleton Class.
 	 public static EventPublisherListener Instance
@@ -54,8 +54,8 @@ public class EventPublisherListener : ScriptableObject {
 	public interface Publisher {
 		
 		void RegisterListener ( string eventType, EventHandler gameEventHandler );
-     	void UnRegisterListener( string eventType, EventHandler gameEventHandler );
-        void NotifyListeners ( string eventType, params GameObject[] participants );
+     		void UnRegisterListener( string eventType, EventHandler gameEventHandler );
+        	void NotifyListeners ( string eventType, params GameObject[] participants );
 		void UnRegisterListeners(  );
 		
 	} ;
