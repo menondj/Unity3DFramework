@@ -19,9 +19,9 @@ using System.Collections;
 public class Sample : MonoBehaviour{
 	
 	
-	SampleStateMachine sampleStateMachine;
+  SampleStateMachine sampleStateMachine;
 	
-	protected EventPublisherListener pubInstance;
+  protected EventPublisherListener pubInstance;
   protected bool somethingOccurs = false;
   
   void Start () {
