@@ -41,7 +41,7 @@ public class Sample : MonoBehaviour{
 		}
     /* Do something .... */
     if ( somethingOccurs ) {
-       pubInstance.NotifyListeners ("NewState");
+       pubInstance.NotifyListeners ("ChangeState");
        somethingOccurs = false;
     }
 	
