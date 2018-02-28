@@ -2,7 +2,7 @@
 Contains base classes for Event/Actions &amp; State Machines using design patterns 
 
 This respository contains useful classes written in C# for Event Driven programming as well as state machine execution. Here we use a comination of publisher observer design patterns and delegates to efficiently create state machines and actions on the fly.
-A complete project using these patterns can be found in  in https://github.com/menondj/UnityRLearning repository. 
+A complete project using these patterns can be found in  in https://github.com/menondj/RLearningUnity3D repository. 
 
 
 
